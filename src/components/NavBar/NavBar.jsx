@@ -1,7 +1,7 @@
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 import { GoPerson } from 'react-icons/go';
 import { GoHeart } from 'react-icons/go';
-import { LiaShoppingBagSolid } from 'react-icons/lia';
 import { GoSearch } from 'react-icons/go';
 
 const NavBar = () => {
@@ -51,12 +51,8 @@ const NavBar = () => {
                      <GoHeart />
                   </span>
                </a>
-               <a href="#">
-                  <span>
-                     <LiaShoppingBagSolid />
-                  </span>
-               </a>
             </div>
+            <CartWidget />
          </header>
       </>
    );
