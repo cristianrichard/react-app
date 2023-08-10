@@ -1,3 +1,4 @@
+import './NavBar.css';
 import { GoPerson } from 'react-icons/go';
 import { GoHeart } from 'react-icons/go';
 import { LiaShoppingBagSolid } from 'react-icons/lia';
