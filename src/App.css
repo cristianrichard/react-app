@@ -10,12 +10,15 @@
 }
 
 /* Reapply the pointer cursor for anchor tags */
-a, button {
+a,
+button {
    cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul, menu {
+ol,
+ul,
+menu {
    list-style: none;
 }
 
@@ -85,10 +88,10 @@ body {
    margin: 0;
    padding: 0;
    font-family: system-ui, sans-serif;
- }
- 
- svg {
+}
+
+svg {
    width: 30px;
    height: 30px;
    color: black;
- }
+}

@@ -3,6 +3,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import { GoPerson } from 'react-icons/go';
 import { GoHeart } from 'react-icons/go';
 import { GoSearch } from 'react-icons/go';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
    return (
@@ -27,9 +28,6 @@ const NavBar = () => {
                   <li>
                      <a href="####">DEPORTE</a>
                   </li>
-                  <li>
-                     <a href="#####">MUNDO ADIDAS</a>
-                  </li>
                </ul>
             </nav>
             <div className='search-container'>
@@ -52,7 +50,9 @@ const NavBar = () => {
                   </span>
                </a>
             </div>
-            <CartWidget />
+            <Link to={"/cart"}>
+               <CartWidget />
+            </Link>
          </header>
       </>
    );

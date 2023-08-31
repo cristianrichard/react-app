@@ -1,13 +1,19 @@
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import DataProvider from './components/DataContext/DataContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import CartContent from './components/CartContent/CartContent';
 import './App.css';
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <ItemListContainer greeting="Hi!!!" />
-    </>
+    <DataProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<CartContent />} />
+        </Routes>
+      </BrowserRouter >
+    </DataProvider>
   )
 }
 

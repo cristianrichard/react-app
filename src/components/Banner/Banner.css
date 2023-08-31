@@ -1,0 +1,19 @@
+.banner-img {
+   width: 100vw;
+   height: 100vh;
+   object-fit: cover;
+}
+
+.banner-btn {
+   position: absolute;
+   z-index: 20;
+   font-size: 2.5rem;
+   padding-left: 100px;
+   padding-right: 100px;
+   border-radius: 7px;
+   border: none;
+   top: 908px;
+   left: 500px;
+}
+
+/* Este botón después también se va...*/
