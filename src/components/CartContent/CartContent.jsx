@@ -1,6 +1,6 @@
 const CartContent = () => {
    return (
-      <div>Acá va el contenido del carrito</div>
+      "Acá va el contenido del carrito"
    )
 };
 
