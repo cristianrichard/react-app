@@ -2,12 +2,19 @@ import "./ItemCount.css";
 import { useState } from "react";
 
 
-function ItemCount() {
+export const ItemCount = ({ stock }) => {
 
    const [initial, setInitial] = useState(1);
 
+   const [errorStock, setErrorStock] = useState(false);
+
    const handleClick = (value) => {
-      setInitial(initial + value);
+      if (initial + value > 0 && initial + value <= stock) {
+         setInitial(initial + value);
+         setErrorStock(false);
+      } else {
+         initial + value >= stock && setErrorStock(true);
+      }
    }
 
 
@@ -18,8 +25,11 @@ function ItemCount() {
             <button onClick={() => handleClick(1)}>+</button>
          </div>
          <button>Agregar al carrito</button>
+         {errorStock && (
+            <div>
+               Se alcanzó el máximo disponible
+            </div>
+         )}
       </div>
    )
-}
-
-export default ItemCount
+};
